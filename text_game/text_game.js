@@ -540,7 +540,7 @@ const textNodes = [
     options: [
       {
         text: 'Back',
-        nextText: 37
+        nextText: 38
       }
     ]
   },
