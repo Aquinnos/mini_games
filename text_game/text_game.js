@@ -343,12 +343,12 @@ const textNodes = [
     text: "You're walking down the staircase towards the darkness below. The only way forward is to take the ladder down, despite your inner self telling you not to, it's either that or going back home without anything special to report. You climbed down the ladder revealing a filthy stone room, with a passage further.",
     options: [
       {
-        text: 'Go further',
-        nextText: 25
-      },
-      {
         text: 'Look around',
         nextText: 24
+      },
+      {
+        text: 'Go further',
+        nextText: 25
       }
     ]
   },
@@ -411,7 +411,7 @@ const textNodes = [
         nextText: 29
       },
       {
-        next: 'Leave the wallet',
+        text: 'Leave the wallet',
         nextText: 26
       }
     ]
@@ -525,12 +525,12 @@ const textNodes = [
     text: "'Well, I have to make necessary preparations. Hold on tight, I will be back soon.' The man leaves. You hear a metal clinging sound, his keys have fallen out of his pocket. You can consider yourself lucky, at least this time.",
     options: [
       {
-        text: 'Pick up the keys and unlock the door',
-        nextText: 39
-      },
-      {
         text: 'Look around the cage',
         nextText: 40
+      },
+      {
+        text: 'Pick up the keys and unlock the door',
+        nextText: 39
       }
     ]
   },
