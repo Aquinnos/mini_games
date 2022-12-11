@@ -1,0 +1,207 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #221c1c;
+}
+
+#main {
+  position: absolute;
+  width: 380px;
+  height: 420px;
+  background-color: #1c1c1c;
+  border-radius: 8px;
+  overflow: hidden;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  border: 1px solid #45f3ff;
+}
+#main #form {
+  position: absolute;
+  background: #28292d;
+  inset: 2px;
+  border-radius: 8px;
+  z-index: 10;
+  padding: 50px 40px;
+  display: flex;
+  flex-direction: column;
+}
+#main #form h2 {
+  color: #45f3ff;
+  font-weight: 500;
+  text-align: center;
+  letter-spacing: 0.1em;
+  font-family: Storm_gust;
+}
+#main .inputBox {
+  position: relative;
+  width: 300px;
+  margin-top: 35px;
+  font-family: Caveat;
+}
+#main .inputBox input {
+  position: relative;
+  width: 100%;
+  padding: 20px 10px 10px;
+  background: transparent;
+  border: none;
+  outline: none;
+  color: #45f3ff;
+  font-size: 1em;
+  letter-spacing: 0.05em;
+  z-index: 10;
+}
+#main .inputBox span {
+  position: absolute;
+  left: 0;
+  padding: 20px 10px 10px;
+  font: 1em;
+  color: #8f8f8f;
+  pointer-events: none;
+  letter-spacing: 0.05em;
+  transition: 0.5s;
+}
+#main .inputBox input:valid ~ span,
+#main .inputBox input:focus ~ span {
+  color: #45f3ff;
+  transform: translateX(-10px) translateY(-34px);
+  font-size: 0.75em;
+}
+#main .inputBox i {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: 2px;
+  background-color: #45f3ff;
+  border-radius: 4px;
+  transition: 0.5s;
+  pointer-events: none;
+  z-index: 9;
+}
+#main .inputBox .inputBox input:valid ~ i,
+#main .inputBox .inputBox input:focus ~ i {
+  height: 44px;
+}
+
+#game {
+  text-align: center;
+  color: #45f3ff;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+#game p {
+  margin-top: 50px;
+  font-weight: bold;
+  font-size: 25px;
+}
+#game h2 {
+  margin-bottom: 20px;
+}
+
+input[type=button] {
+  border: none;
+  outline: none;
+  background-color: #45f3ff;
+  padding: 11px 25px;
+  width: 100px;
+  margin-top: 10px;
+  border-radius: 4px;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+input[type=button]:hover {
+  color: white;
+}
+
+#tytul {
+  display: none;
+}
+
+#board {
+  width: 450px;
+  height: 450px;
+  /* background-color: gray; */
+  margin: 0 auto;
+  display: flex;
+  flex-wrap: wrap;
+  display: none;
+  border: #45f3ff solid 4px;
+  font-family: Storm_gust;
+}
+
+.tile {
+  width: 147px;
+  height: 147px;
+  font-size: 150px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  cursor: default;
+}
+
+.winner {
+  background-color: #45f3ff;
+  color: white;
+  overflow: hidden;
+}
+
+.winner:hover {
+  color: #45f3ff;
+  background-color: white;
+}
+
+.horizontal-line {
+  border-bottom: 1px solid #45f3ff;
+}
+
+.vertical-line {
+  border-right: 1px solid #45f3ff;
+}
+
+#but2, #but3 {
+  display: none;
+  margin: 20px;
+}
+
+#but1 {
+  font-family: Caveat;
+}
+
+@-webkit-keyframes animate {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes animate {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+@font-face {
+  font-family: Storm_Gust;
+  src: url(../fonts/Storm_Gust.ttf);
+}
+@font-face {
+  font-family: Caveat;
+  src: url(../fonts/Caveat-Regular.ttf);
+}/*# sourceMappingURL=tictactoe.css.map */

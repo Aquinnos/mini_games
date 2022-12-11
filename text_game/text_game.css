@@ -1,0 +1,116 @@
+*, *::before, *::after {
+  box-sizing: border-box;
+  font-family: Gotham Rounded;
+}
+
+body {
+  padding: 0;
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100vw;
+  height: 100vh;
+  background-color: #000;
+}
+
+#form {
+  position: relative;
+  background: #28292d;
+  inset: 2px;
+  border-radius: 8px;
+  padding: 50px 40px;
+  display: flex;
+  flex-direction: column;
+  height: 400px;
+  width: 350px;
+  border: 1px solid red;
+}
+#form h2 {
+  color: #45f3ff;
+  text-align: center;
+  letter-spacing: 0.1em;
+  font-size: 2em;
+  font-family: Storm_gust;
+  width: 200px;
+  position: absolute;
+  left: 50%;
+  top: 30%;
+  transform: translate(-50%, -50%);
+}
+#form #but1 {
+  position: absolute;
+  border-radius: 5px;
+  width: 200px;
+  background-color: #45f3ff;
+  font-family: Caveat;
+  font-size: 20px;
+  left: 50%;
+  top: 70%;
+  transform: translate(-50%, -50%);
+}
+#form #but1:hover {
+  color: white;
+  border: 1px solid white;
+}
+
+.container {
+  width: 800px;
+  max-width: 80%;
+  background-color: #333;
+  padding: 10px;
+  border-radius: 5px;
+  box-shadow: 0 0 10px 2px;
+  display: none;
+  -webkit-animation: poof 6s linear;
+          animation: poof 6s linear;
+  color: #45f3ff;
+}
+.container .btn-grid {
+  display: grid;
+  grid-template-columns: repeat(2, auto);
+  gap: 10px;
+  margin-top: 20px;
+}
+.container .btn {
+  background-color: #28292d;
+  border: 1px solid #45f3ff;
+  border-radius: 5px;
+  padding: 5px 10px;
+  color: #45f3ff;
+  outline: none;
+  font-size: 20px;
+  margin-top: 10px;
+}
+.container .btn:hover {
+  border: 2px solid white;
+  color: white;
+}
+.container #text {
+  font-size: 20px;
+}
+
+@font-face {
+  font-family: Storm_Gust;
+  src: url(../fonts/Storm_Gust.ttf);
+}
+@font-face {
+  font-family: Caveat;
+  src: url(../fonts/Caveat-Regular.ttf);
+}
+@-webkit-keyframes poof {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+@keyframes poof {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}/*# sourceMappingURL=text_game.css.map */

@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport", content="width=device-width, initial-scale=1.0">
+        <title>Snake</title>
+        <link rel="stylesheet" href="snake.css">
+        <script src="snake.js"></script>
+    </head>
+
+    <body>
+        <div id="main">
+            <div id="form">
+                <h2>Snake</h2>
+                <br><input type="button" value="Play" class="form-buts" id="but1">
+                <br><input type="button" value="Mode" class="form-buts" id="game-mode">
+            </div>
+            <div id="mode">
+                <h2>Game modes</h2>
+                <br><input type="button" value="Hidden board" id="hid" class="form-buts">
+                <fieldset>
+                    <h3>Snake speed</h3>
+                    <br><input type="range" id="range" value="20" min="20" max="200" oninput="num.value = this.value">
+                    <output id="num">0</output>
+                    <br><input type="button" value="Play" class="form-buts" id="speed" title="Domyślna wartość to 100">
+                </fieldset>
+                <br><input type="button" value="Back" id="mode-back" class="back form-buts" >
+            </div>
+            <div id="game">
+                <h1 id="title">Snake</h1>
+                <canvas id="board"></canvas>
+            </div>
+            <div>
+                <h2 id="points"></h2>
+            </div>
+        <div id="buttons">
+            <input type="button" value="Reset" id="but2">
+            <input type="button" value="Back" id="but3" class="back" onclick="location.href = '../index.html'">
+        </div>
+        </div>
+    </body>
+</html>

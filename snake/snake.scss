@@ -1,0 +1,206 @@
+$blue: #45f3ff;
+$font-caveat: Caveat;
+$font-St-gust: Storm_gust;
+
+body {
+    font-family: 'Courier New', Courier, monospace;
+    background-color: #221c1c;
+    justify-content: center;
+    align-items: center;
+}
+
+#main {
+    width: 550px;
+    height: 700px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    text-align: center;
+    background-color: #221c1c;
+    color: aqua;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    
+    #form {
+        position: absolute;
+        background: #28292d;
+        inset: 2px;
+        border-radius: 8px;
+        padding: 50px 40px;
+        display: flex;
+        flex-direction: column;
+        height: 300px;
+        width: 300px;
+        justify-content: center;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%,-50%);
+        border: 1px solid red;
+
+        .form-buts {
+            margin: 20px;
+        }
+
+        h2 {
+            color: $blue;
+            text-align: center;
+            letter-spacing: 0.1em;
+            font-size: 2em;
+            font-family: $font-St-gust;
+        } 
+
+        .form-buts {
+            width: 260px;
+            background-color: $blue;
+            font-family: $font-caveat;
+            font-size: 17px;
+
+            &:hover{
+                    color: white;
+            }
+        }
+    }
+
+    #mode {
+        position: absolute;
+        background: #28292d;
+        inset: 2px;
+        border-radius: 8px;
+        padding: 50px 40px;
+        display: flex;
+        flex-direction: column;
+        height: 450px;
+        width: 300px;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%,-50%);
+        border: 1px solid red;
+        display: none;
+
+        h2 {
+            color: $blue;
+            text-align: center;
+            letter-spacing: 0.2em;
+            font-size: 2em;
+            font-family: $font-St-gust;
+        } 
+
+        .form-buts {
+            width: 260px;
+            background-color: $blue;
+            font-family: $font-caveat;
+            font-size: 17px;
+
+            &:hover{
+                    color: white;
+            }
+        }
+
+        fieldset {
+            display: flex;
+            flex-direction: column;
+            border: 1px solid red;
+            position: absolute;
+            left: 50%;
+            top: 52%;
+            transform: translate(-50%,-50%);
+
+            h3 {
+                font-family: $font-St-gust;
+                letter-spacing: 0.2em;
+            }
+        }
+        
+        #mode-back {
+            position: absolute;
+            left: 50%;
+            top: 75%;
+            transform: translate(-50%,-50%);
+        }
+
+        #hid {
+            position: absolute;
+            left: 50%;
+            top: 25%;
+            transform: translate(-50%,-50%);
+        }
+    }
+
+    #game {
+
+        #title {
+            color: #45f3ff;
+            text-align: center;
+            letter-spacing: 0.1em;
+            display: none;
+        }
+
+        canvas {
+            display: none;
+        }
+    }
+
+    #buttons {
+        display: flex;
+        flex-direction: row;
+
+        #but2, #but3 {
+            display: none;
+            margin: 20px;
+
+            &:hover {
+                color: white;
+            }
+        }
+    }
+
+    input[type="button"] {
+        border: none;
+        outline: none;
+        background-color: $blue;
+        padding: 11px 25px;
+        width: 100px;
+        margin-top: 10px;
+        border-radius: 4px;
+        font-weight: 600;
+        cursor: pointer;
+    }
+}
+
+
+@keyframes znik {
+    0% {
+        opacity: 1;
+    }
+
+    50% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+    
+}
+
+@keyframes animate {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+@font-face {
+    font-family: Storm_Gust;
+    src: url(../fonts/Storm_Gust.ttf);
+}
+
+@font-face {
+    font-family: Caveat;
+    src: url(../fonts/Caveat-Regular.ttf);
+}

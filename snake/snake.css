@@ -1,0 +1,192 @@
+body {
+  font-family: "Courier New", Courier, monospace;
+  background-color: #221c1c;
+  justify-content: center;
+  align-items: center;
+}
+
+#main {
+  width: 550px;
+  height: 700px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  background-color: #221c1c;
+  color: aqua;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+#main #form {
+  position: absolute;
+  background: #28292d;
+  inset: 2px;
+  border-radius: 8px;
+  padding: 50px 40px;
+  display: flex;
+  flex-direction: column;
+  height: 300px;
+  width: 300px;
+  justify-content: center;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  border: 1px solid red;
+}
+#main #form .form-buts {
+  margin: 20px;
+}
+#main #form h2 {
+  color: #45f3ff;
+  text-align: center;
+  letter-spacing: 0.1em;
+  font-size: 2em;
+  font-family: Storm_gust;
+}
+#main #form .form-buts {
+  width: 260px;
+  background-color: #45f3ff;
+  font-family: Caveat;
+  font-size: 17px;
+}
+#main #form .form-buts:hover {
+  color: white;
+}
+#main #mode {
+  position: absolute;
+  background: #28292d;
+  inset: 2px;
+  border-radius: 8px;
+  padding: 50px 40px;
+  display: flex;
+  flex-direction: column;
+  height: 450px;
+  width: 300px;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  border: 1px solid red;
+  display: none;
+}
+#main #mode h2 {
+  color: #45f3ff;
+  text-align: center;
+  letter-spacing: 0.2em;
+  font-size: 2em;
+  font-family: Storm_gust;
+}
+#main #mode .form-buts {
+  width: 260px;
+  background-color: #45f3ff;
+  font-family: Caveat;
+  font-size: 17px;
+}
+#main #mode .form-buts:hover {
+  color: white;
+}
+#main #mode fieldset {
+  display: flex;
+  flex-direction: column;
+  border: 1px solid red;
+  position: absolute;
+  left: 50%;
+  top: 52%;
+  transform: translate(-50%, -50%);
+}
+#main #mode fieldset h3 {
+  font-family: Storm_gust;
+  letter-spacing: 0.2em;
+}
+#main #mode #mode-back {
+  position: absolute;
+  left: 50%;
+  top: 75%;
+  transform: translate(-50%, -50%);
+}
+#main #mode #hid {
+  position: absolute;
+  left: 50%;
+  top: 25%;
+  transform: translate(-50%, -50%);
+}
+#main #game #title {
+  color: #45f3ff;
+  text-align: center;
+  letter-spacing: 0.1em;
+  display: none;
+}
+#main #game canvas {
+  display: none;
+}
+#main #buttons {
+  display: flex;
+  flex-direction: row;
+}
+#main #buttons #but2, #main #buttons #but3 {
+  display: none;
+  margin: 20px;
+}
+#main #buttons #but2:hover, #main #buttons #but3:hover {
+  color: white;
+}
+#main input[type=button] {
+  border: none;
+  outline: none;
+  background-color: #45f3ff;
+  padding: 11px 25px;
+  width: 100px;
+  margin-top: 10px;
+  border-radius: 4px;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+@-webkit-keyframes znik {
+  0% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes znik {
+  0% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+@-webkit-keyframes animate {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+@keyframes animate {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+@font-face {
+  font-family: Storm_Gust;
+  src: url(../fonts/Storm_Gust.ttf);
+}
+@font-face {
+  font-family: Caveat;
+  src: url(../fonts/Caveat-Regular.ttf);
+}/*# sourceMappingURL=snake.css.map */

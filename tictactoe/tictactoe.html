@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tic tac toe</title>
+    <link rel="stylesheet" href="tictactoe.css">
+    <script src="tictactoe.js"></script>
+    <link rel="shortcut icon" href="ttt.ico" type="image/x-icon">
+</head>
+<body>
+    <div id="main">
+        <div id="form">
+            <h2>Tic tac toe</h2>
+            <div class="inputBox">
+                <input type="text" id="player1" maxlength="15" required>
+                <span>Player 1</span>
+                <i></i>
+            </div>
+            <div class="inputBox">
+                <input type="text" id="player2" maxlength="15" required>
+                <span>Player 2</span> 
+                <i></i>
+            </div>
+            <br><input type="button" value="Play" id="but1">
+        </div>
+    </div>
+    <div id="game">
+        <h1 id="tytul">Tic tac toe</h1>
+        <br>
+        <!-- 3x3 -->
+        <div id="board"></div>
+        <p id="txt"></p>
+        <input type="button" value="Reset" id="but2">
+        <input type="button" value="Back" id="but3" onclick="location.href = '../index.html'">
+    </div>
+</body>
+</html>

@@ -1,0 +1,152 @@
+$blue: #45f3ff;
+$font-creep: Creepster;
+$font-caveat: Caveat;
+$font-St-gust: Storm_gust;
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #221c1c;
+    font-family: $font-St-gust;
+}
+
+hr {
+    width: 200px;
+    height: 2px;
+    border: 1px solid $blue;
+    margin: 10px 0px 10px 0px;
+}
+
+#main {
+    position: absolute;
+    width: 380px;
+    height: 450px;
+    background-color: #1c1c1c;
+    border-radius: 8px;
+    overflow: hidden;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+
+    &::before {
+    content: '';
+        position: absolute;
+        top: -50%;
+        left: -50%;
+        width: 380px;
+        height: 420px;
+        background: linear-gradient(0deg, transparent, #ff2525, #45f3ff);
+        transform-origin: bottom right;
+        animation: animate 6s linear infinite;
+        }
+    
+    &::after {
+        content: '';
+        position: absolute;
+        top: -50%;
+        left: -50%;
+        width: 380px;
+        height: 420px;
+        background: linear-gradient(0deg, transparent, $blue, $blue);
+        transform-origin: bottom right;
+        animation: animate 6s linear infinite;
+        animation-delay: -3s;
+    }
+}
+
+
+#menu {
+    position: absolute;
+    background: #28292d;
+    inset: 2px;
+    border-radius: 8px;
+    z-index: 10;
+    padding: 50px 40px;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+
+    h2 {
+        color: $blue;
+        font-weight: 500;
+        font-size: 40px;
+        text-align: center;
+        letter-spacing: 0.1em;
+    }
+}
+
+input[type="button"] {
+    border: none;
+    outline: none;
+    background-color: rgba(0, 0, 0, 0.295);
+    padding: 11px 25px;
+    width: 200px;
+    margin-top: 10px;
+    border-radius: 4px;
+    cursor: pointer;
+    margin: 20px;
+    font-size: 25px;
+    font: bold 25px $font-caveat;
+    color: $blue;
+    border: 1px solid $blue;
+
+    &:hover {
+        color: white;
+        border: 1px solid white;
+    }
+}
+ 
+#video {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    background: #000;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+
+    video {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+}
+
+@font-face {
+    font-family: Creepster;
+    src: url(fonts/Creepster-Regular.ttf);
+}
+
+@font-face {
+    font-family: Storm_Gust;
+    src: url(fonts/Storm_Gust.ttf);
+}
+
+@font-face {
+    font-family: Caveat;
+    src: url(fonts/Caveat-Regular.ttf);
+}
+
+@keyframes animate {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
+}
