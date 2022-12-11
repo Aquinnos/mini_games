@@ -1,6 +1,7 @@
 $blue: #45f3ff;
 $font-caveat: Caveat;
 $font-St-gust: Storm_gust;
+$font-sans: Source-Sans-Pro;
 
 body {
     font-family: 'Courier New', Courier, monospace;
@@ -54,8 +55,9 @@ body {
         .form-buts {
             width: 260px;
             background-color: $blue;
-            font-family: $font-caveat;
+            font-family: $font-sans;
             font-size: 17px;
+            font-weight: 600;
 
             &:hover{
                     color: white;
@@ -90,8 +92,9 @@ body {
         .form-buts {
             width: 260px;
             background-color: $blue;
-            font-family: $font-caveat;
+            font-family: $font-sans;
             font-size: 17px;
+            font-weight: 600;
 
             &:hover{
                     color: white;
@@ -149,6 +152,9 @@ body {
         #but2, #but3 {
             display: none;
             margin: 20px;
+            font-family: $font-sans;
+            font-size: 17px;
+            font-weight: 600;
 
             &:hover {
                 color: white;
@@ -203,4 +209,9 @@ body {
 @font-face {
     font-family: Caveat;
     src: url(../fonts/Caveat-Regular.ttf);
+}
+
+@font-face {
+    font-family: Source-Sans-Pro;
+    src: url(../fonts/SourceSansPro-LightItalic.ttf);
 }

@@ -45,7 +45,7 @@ body {
   position: relative;
   width: 300px;
   margin-top: 35px;
-  font-family: Caveat;
+  font-family: Source-Sans-Pro;
 }
 #main .inputBox input {
   position: relative;
@@ -177,7 +177,9 @@ input[type=button]:hover {
 }
 
 #but1 {
-  font-family: Caveat;
+  font-family: Source-Sans-Pro;
+  font-size: 17px;
+  font-weight: 600;
 }
 
 @-webkit-keyframes animate {
@@ -204,4 +206,8 @@ input[type=button]:hover {
 @font-face {
   font-family: Caveat;
   src: url(../fonts/Caveat-Regular.ttf);
+}
+@font-face {
+  font-family: Source-Sans-Pro;
+  src: url(../fonts/SourceSansPro-LightItalic.ttf);
 }/*# sourceMappingURL=tictactoe.css.map */

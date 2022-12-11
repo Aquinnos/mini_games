@@ -29,9 +29,9 @@ body {
 #form h2 {
   color: #45f3ff;
   text-align: center;
-  letter-spacing: 0.1em;
+  letter-spacing: 0.2em;
   font-size: 2em;
-  font-family: Storm_gust;
+  font-family: Storm_Gust;
   width: 200px;
   position: absolute;
   left: 50%;
@@ -48,10 +48,10 @@ body {
   left: 50%;
   top: 70%;
   transform: translate(-50%, -50%);
+  font-weight: 500;
 }
 #form #but1:hover {
   color: white;
-  border: 1px solid white;
 }
 
 .container {
@@ -81,6 +81,7 @@ body {
   outline: none;
   font-size: 20px;
   margin-top: 10px;
+  font-family: Source-Sans-Pro;
 }
 .container .btn:hover {
   border: 2px solid white;
@@ -88,11 +89,21 @@ body {
 }
 .container #text {
   font-size: 20px;
+  font-family: Marker;
+  letter-spacing: 0.1em;
 }
 
 @font-face {
   font-family: Storm_Gust;
   src: url(../fonts/Storm_Gust.ttf);
+}
+@font-face {
+  font-family: Marker;
+  src: url(../fonts/PermanentMarker-Regular.ttf);
+}
+@font-face {
+  font-family: Source-Sans-Pro;
+  src: url(../fonts/SourceSansPro-LightItalic.ttf);
 }
 @font-face {
   font-family: Caveat;

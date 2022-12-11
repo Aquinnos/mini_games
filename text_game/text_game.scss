@@ -1,6 +1,8 @@
 $blue: #45f3ff;
-$font-caveat: Caveat;
-$font-St-gust: Storm_gust;
+$font-sans: Source-Sans-Pro;
+$font-pernament-marker: Marker;
+$font-St-gust: Storm_Gust;
+$font-Caveat: Caveat;
 
 *, *::before, *::after {
   box-sizing: border-box;
@@ -34,7 +36,7 @@ body {
   h2 {
     color: $blue;
     text-align: center;
-    letter-spacing: 0.1em;
+    letter-spacing: 0.2em;
     font-size: 2em;
     font-family: $font-St-gust;
     width: 200px;
@@ -49,15 +51,15 @@ body {
     border-radius: 5px;
     width: 200px;
     background-color: $blue;
-    font-family: $font-caveat;
+    font-family: $font-Caveat;
     font-size: 20px;
     left: 50%;
     top: 70%;
     transform: translate(-50%,-50%);
+    font-weight: 500;
 
     &:hover{
       color: white;
-      border: 1px solid white;
     }
   }
 }
@@ -89,21 +91,34 @@ body {
     outline: none;
     font-size: 20px;
     margin-top: 10px;
-  }
-  
-  .btn:hover {
-    border: 2px solid white;
-    color: white;
+    font-family: $font-sans;
+
+    &:hover {
+      border: 2px solid white;
+      color: white;
+    }
   }
 
   #text {
     font-size: 20px;
+    font-family: $font-pernament-marker;
+    letter-spacing: 0.1em;
   }
 }
 
 @font-face {
   font-family: Storm_Gust;
   src: url(../fonts/Storm_Gust.ttf);
+}
+
+@font-face {
+  font-family: Marker;
+  src: url(../fonts/PermanentMarker-Regular.ttf);
+}
+
+@font-face {
+  font-family: Source-Sans-Pro;
+  src: url(../fonts/SourceSansPro-LightItalic.ttf);
 }
 
 @font-face {

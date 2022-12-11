@@ -48,8 +48,9 @@ body {
 #main #form .form-buts {
   width: 260px;
   background-color: #45f3ff;
-  font-family: Caveat;
+  font-family: Source-Sans-Pro;
   font-size: 17px;
+  font-weight: 600;
 }
 #main #form .form-buts:hover {
   color: white;
@@ -80,8 +81,9 @@ body {
 #main #mode .form-buts {
   width: 260px;
   background-color: #45f3ff;
-  font-family: Caveat;
+  font-family: Source-Sans-Pro;
   font-size: 17px;
+  font-weight: 600;
 }
 #main #mode .form-buts:hover {
   color: white;
@@ -127,6 +129,9 @@ body {
 #main #buttons #but2, #main #buttons #but3 {
   display: none;
   margin: 20px;
+  font-family: Source-Sans-Pro;
+  font-size: 17px;
+  font-weight: 600;
 }
 #main #buttons #but2:hover, #main #buttons #but3:hover {
   color: white;
@@ -189,4 +194,8 @@ body {
 @font-face {
   font-family: Caveat;
   src: url(../fonts/Caveat-Regular.ttf);
+}
+@font-face {
+  font-family: Source-Sans-Pro;
+  src: url(../fonts/SourceSansPro-LightItalic.ttf);
 }/*# sourceMappingURL=snake.css.map */
