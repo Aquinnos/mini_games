@@ -2,15 +2,16 @@ var board;
 var playerO = "O";
 var playerX = "X";
 
+//sounds
 var click1 = new Audio();
 var click2 = new Audio();
 var draw = new Audio();
 var win = new Audio();
+
 click1.src = "click1.mp3";
 click2.src = "click2.mp3";
 draw.src = "draw.mp3";
 win.src = "win.mp3";
-
 
 //player draw
 var currentPlayer;
@@ -25,6 +26,7 @@ var gameOver = false;
 
 window.onload = function() {
     document.getElementById("but1").addEventListener("click", validateForm);
+    document.getElementById("back").addEventListener("click", back);
     setGame();
 }
 
@@ -32,6 +34,9 @@ function reload() {
     location.reload();
 }
 
+function back() {
+    location.href = '../index.html';
+}
 
 function validateForm() {
     let player1 = document.getElementById("player1").value;

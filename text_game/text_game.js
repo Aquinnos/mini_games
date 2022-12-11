@@ -12,11 +12,16 @@ function startGame() {
 
 window.onload = function() {
   document.getElementById("but1").addEventListener("click", play);
+  document.getElementById("but2").addEventListener("click", back)
 }
 
 function play() {
   document.getElementById("main").style.display = "grid";
   document.getElementById("form").style.display = "none";
+}
+
+function back() {
+  location.href = '../index.html';
 }
 
 function showTextNode(textNodeIndex) {

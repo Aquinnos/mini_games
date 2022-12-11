@@ -41,6 +41,19 @@ body {
   letter-spacing: 0.1em;
   font-family: Storm_gust;
 }
+#main #form-btns {
+  margin-top: 10px;
+}
+#main #form-btns #but1 {
+  font-family: Source-Sans-Pro;
+  font-size: 17px;
+  font-weight: 600;
+}
+#main #form-btns #back {
+  font-family: Source-Sans-Pro;
+  font-weight: 600;
+  font-size: 17px;
+}
 #main .inputBox {
   position: relative;
   width: 300px;

@@ -32,6 +32,7 @@ window.onload = function() {
     document.getElementById("game-mode").addEventListener("click", mods);
     document.getElementById("hid").addEventListener("click", play2);
     document.getElementById("speed").addEventListener("click", play3);
+    document.getElementById("back").addEventListener("click", back);
 
     board = document.getElementById("board");
     board.height = rows * blockSize;
@@ -42,6 +43,10 @@ window.onload = function() {
 
     placeFood();
     document.addEventListener("keyup", changeDirection);
+}
+
+function back() {
+    location.href = '../index.html';
 }
 
 function play1() {

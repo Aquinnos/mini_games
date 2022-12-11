@@ -129,9 +129,6 @@ body {
 #main #buttons #but2, #main #buttons #but3 {
   display: none;
   margin: 20px;
-  font-family: Source-Sans-Pro;
-  font-size: 17px;
-  font-weight: 600;
 }
 #main #buttons #but2:hover, #main #buttons #but3:hover {
   color: white;

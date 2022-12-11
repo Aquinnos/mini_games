@@ -48,6 +48,22 @@ body {
         }
     }
 
+    #form-btns {
+        margin-top: 10px;
+
+        #but1 {
+            font-family: $font-sans;
+            font-size: 17px;
+            font-weight: 600;
+        }
+
+        #back {
+            font-family: $font-sans;
+            font-weight: 600;
+            font-size: 17px;
+        }
+    }
+
     .inputBox {
         position: relative;
         width: 300px;
@@ -196,7 +212,6 @@ input[type="button"]:hover {
     font-family: $font-sans;
     font-size: 17px;
     font-weight: 600;
-    
 }
 
 @keyframes animate {
