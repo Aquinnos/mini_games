@@ -2,7 +2,6 @@ const textElement = document.getElementById('text');
 const optionButtonsElement = document.getElementById('option-buttons');
 
 var ambient1 = new Audio();
-var ambient2 = new Audio();
 
 ambient1.src = "ambient1.mp3";
 ambient1.volume = 0.3;
@@ -82,7 +81,7 @@ const textNodes = [
   //gameplay -> outside [1-1]
   {
     id: 2,
-    text: 'You faintly see the house through the fog.',
+    text: 'You faintly see the house through the fog.' + "<br>" + "<a href='maps/outside1_1.html' target='_blank' style='color: aqua; text-decoration: none;' >" + "(Map)" + "</a>",
     options: [
       {
         text: 'Look around',
@@ -241,7 +240,7 @@ const textNodes = [
   //kitchen [2-1]
   {
     id: 14,
-    text: "You walk into the kitchen, and smell the stench of rotten food, most likely coming from the pots at the counter. You'd rather not look inside them. ",
+    text: "You walk into the kitchen, and smell the stench of rotten food, most likely coming from the pots at the counter. You'd rather not look inside them. " + "<br>" + "<a href='maps/kitchen2_1.html' target='_blank' style='color: aqua; text-decoration: none;' >" + "(Map)" + "</a>",
     options: [
       {
         text: 'Read a note on the fridge',
@@ -255,7 +254,7 @@ const textNodes = [
   },
   {
     id: 15,
-    text: "The note states: " + "<span style='font-family: Caveat; font-size: 25px';>" + '"Ill be back home at 6PM! Your dinner is in the fridge, remember to clear the bookshelf upstairs. After I come back we can finally go to see show! \n much love,███████ "' + "</span>",
+    text: "The note states: " + "<span style='font-family: Caveat; font-size: 25px; letter-spacing: 0.01em';>" + '"Ill be back home at 6PM! Your dinner is in the fridge, remember to clear the bookshelf upstairs. After I come back we can finally go to see show!' + "<br>" + 'much love, ███████ "' + "</span>",
     options: [
       {
         text: 'Back',
@@ -266,7 +265,7 @@ const textNodes = [
   //living room [2-2]
   {
     id: 16,
-    text: "You walk into the living room, you feel the dust of old furniture in the air, apart from that it is a neat living room. It appears That the carpet is out of place. ",
+    text: "You walk into the living room, you feel the dust of old furniture in the air, apart from that it is a neat living room. It appears That the carpet is out of place. " + "<br>" + "<a href='maps/living_room2_2.html' target='_blank' style='color: aqua; text-decoration: none;' >" + "(Map)" + "</a>",
     options: [
       {
         text: 'Look under the carpet',
@@ -280,7 +279,7 @@ const textNodes = [
   },
   {
     id: 17,
-    text: "You find a dirty note, most of is blurry and washed off, but you manage to make out this: " + "<span style='font-family: Caveat; font-size: 25px';>" + "██████████bookshelf upstairs████tried escaping again█████████better security need███████buy new locks████chains██. " + "</span>" +  "You have a feeling that it might be for the better that the note was damaged.",
+    text: "You find a dirty note, most of is blurry and washed off, but you manage to make out this: " + "<span style='font-family: Caveat; font-size: 25px; letter-spacing: 0.01em';>" + "██████████bookshelf upstairs████tried escaping again█████████better security need███████buy new locks████chains██. " + "</span>" +  "You have a feeling that it might be for the better that the note was damaged.",
     options: [
       {
         text: 'Back',
@@ -291,7 +290,7 @@ const textNodes = [
   //upstairs -> inside [1-2]
   {
     id: 18,
-    text: "You are now upstairs, and you're definitely not alone. You see the door at the end of the hallway close right before your eyes.",
+    text: "You are now upstairs, and you're definitely not alone. You see the door at the end of the hallway close right before your eyes." + "<br>" + "<a href='maps/upstairs.html' target='_blank' style='color: aqua; text-decoration: none;' >" + "(Map)" + "</a>",
     options: [
       {
         text: 'Check the bathroom',
@@ -330,7 +329,7 @@ const textNodes = [
   //inside [2-3]
   {
     id: 21,
-    text: "It's an old fashioned bedroom. The most eyecatching thing is a massive bookshelf in the corner. It's also the coldest room in the house, the window is wide open and let's in the cold, aswell as the moonlight.",
+    text: "It's an old fashioned bedroom. The most eyecatching thing is a massive bookshelf in the corner. It's also the coldest room in the house, the window is wide open and let's in the cold, aswell as the moonlight." + "<br>" + "<a href='maps/bedroom2_3.html' target='_blank' style='color: aqua; text-decoration: none;' >" + "(Map)" + "</a>",
     options: [
       {
         text: 'Back',
@@ -351,15 +350,15 @@ const textNodes = [
   //secret room [1-1]
   {
     id: 23,
-    text: "You're walking down the staircase towards the darkness below. The only way forward is to take the ladder down, despite your inner self telling you not to, it's either that or going back home without anything special to report. You climbed down the ladder revealing a filthy stone room, with a passage further.",
+    text: "You're walking down the staircase towards the darkness below. The only way forward is to take the ladder down, despite your inner self telling you not to, it's either that or going back home without anything special to report. You climbed down the ladder revealing a filthy stone room, with a passage further." + "<br>" + "<a href='maps/secret_room1_1.html' target='_blank' style='color: aqua; text-decoration: none;' >" + "(Map)" + "</a>",
     options: [
       {
         text: 'Look around',
-        nextText: 24
+        nextText: 25
       },
       {
         text: 'Go further',
-        nextText: 25
+        nextText: 24
       }
     ]
   },
@@ -429,7 +428,7 @@ const textNodes = [
   },
   {
     id: 29,
-    text: "You pick up the wallet and look through it. Inside is an ID of a " +  '"Dave O████"' +  " the last name is covered by stains. It appears you found your missing person, or at least what's left of him.	(you got proof of the missing teen)",
+    text: "You pick up the wallet and look through it. Inside is an ID of a " +  '"Dave ' + "<span style='letter-spacing: 0.01em;'>" + 'O████"' + "</span>" + " the last name is covered by stains. It appears you found your missing person, or at least what's left of him.	(you got proof of the missing teen)",
     options: [
       {
         text: 'Back',
@@ -471,7 +470,7 @@ const textNodes = [
   //cell [1]
   {
     id: 33,
-    text: "You are awake, only darkness and a heavy sound of breathing surrounds you. You see your opressor through metal bars, he trapped you here. He's a tall man, he is wearing a hood and you cannot see his face. His only distinguishing feature is his deep voice.\n'You are finally awake, wonderful.' - He says. 'Now you will be used to serve my purpose.'",
+    text: "You are awake, only darkness and a heavy sound of breathing surrounds you. You see your opressor through metal bars, he trapped you here. He's a tall man, he is wearing a hood and you cannot see his face. His only distinguishing feature is his deep voice.\n'You are finally awake, wonderful.' - He says. 'Now you will be used to serve my purpose.'" + "<br>" + "<a href='maps/cell.html' target='_blank' style='color: aqua; text-decoration: none;' >" + "(Map)" + "</a>",
     options: [
       {
         text: 'Who are you?',
