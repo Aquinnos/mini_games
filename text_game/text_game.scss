@@ -3,6 +3,7 @@ $font-sans: Source-Sans-Pro;
 $font-pernament-marker: Marker;
 $font-St-gust: Storm_Gust;
 $font-Caveat: Caveat;
+$font-Creepster: Creep;
 
 *, *::before, *::after {
   box-sizing: border-box;
@@ -31,7 +32,8 @@ body {
   flex-direction: column;
   height: 400px;
   width: 350px;
-  border: 1px solid red;
+  color: red;
+  box-shadow: 0 0 10px 2px;
 
   h2 {
     color: $blue;
@@ -39,7 +41,7 @@ body {
     letter-spacing: 0.2em;
     font-size: 2em;
     font-family: $font-St-gust;
-    width: 200px;
+    width: 300px;
     position: absolute;
     left: 50%;
     top: 20%;
@@ -61,6 +63,7 @@ body {
 
     &:hover{
       color: white;
+      box-shadow: 0 0 10px 2px;
     }
   }
 
@@ -80,6 +83,7 @@ body {
 
     &:hover{
       color: white;
+      box-shadow: 0 0 10px 2px;
     }
   }
 }
@@ -93,7 +97,7 @@ body {
   box-shadow: 0 0 10px 2px;
   display: none;
   animation: poof 6s linear;
-  color: $blue;
+  color: red;
 
   .btn-grid {
     display: grid;
@@ -114,8 +118,8 @@ body {
     font-family: $font-sans;
 
     &:hover {
-      border: 2px solid white;
       color: white;
+      box-shadow: 0 0 10px 2px;
     }
   }
 
@@ -123,6 +127,7 @@ body {
     font-size: 20px;
     font-family: $font-pernament-marker;
     letter-spacing: 0.1em;
+    color: $blue;
   }
 }
 
@@ -144,6 +149,11 @@ body {
 @font-face {
   font-family: Caveat;
   src: url(../fonts/Caveat-Regular.ttf);
+}
+
+@font-face {
+  font-family: Creep;
+  src: url(../fonts/Creepster-Regular.ttf);
 }
 
 @keyframes poof {

@@ -24,7 +24,8 @@ body {
   flex-direction: column;
   height: 400px;
   width: 350px;
-  border: 1px solid red;
+  color: red;
+  box-shadow: 0 0 10px 2px;
 }
 #form h2 {
   color: #45f3ff;
@@ -32,7 +33,7 @@ body {
   letter-spacing: 0.2em;
   font-size: 2em;
   font-family: Storm_Gust;
-  width: 200px;
+  width: 300px;
   position: absolute;
   left: 50%;
   top: 20%;
@@ -53,6 +54,7 @@ body {
 }
 #form #but1:hover {
   color: white;
+  box-shadow: 0 0 10px 2px;
 }
 #form #but2 {
   position: absolute;
@@ -69,6 +71,7 @@ body {
 }
 #form #but2:hover {
   color: white;
+  box-shadow: 0 0 10px 2px;
 }
 
 .container {
@@ -81,7 +84,7 @@ body {
   display: none;
   -webkit-animation: poof 6s linear;
           animation: poof 6s linear;
-  color: #45f3ff;
+  color: red;
 }
 .container .btn-grid {
   display: grid;
@@ -101,13 +104,14 @@ body {
   font-family: Source-Sans-Pro;
 }
 .container .btn:hover {
-  border: 2px solid white;
   color: white;
+  box-shadow: 0 0 10px 2px;
 }
 .container #text {
   font-size: 20px;
   font-family: Marker;
   letter-spacing: 0.1em;
+  color: #45f3ff;
 }
 
 @font-face {
@@ -125,6 +129,10 @@ body {
 @font-face {
   font-family: Caveat;
   src: url(../fonts/Caveat-Regular.ttf);
+}
+@font-face {
+  font-family: Creep;
+  src: url(../fonts/Creepster-Regular.ttf);
 }
 @-webkit-keyframes poof {
   0% {

@@ -1,7 +1,12 @@
 const textElement = document.getElementById('text');
 const optionButtonsElement = document.getElementById('option-buttons');
 
-var gameOver = false;
+var ambient1 = new Audio();
+var ambient2 = new Audio();
+
+ambient1.src = "ambient1.mp3";
+ambient1.volume = 0.3;
+ambient1.loop = true;
 
 let state = {};
 
@@ -12,12 +17,13 @@ function startGame() {
 
 window.onload = function() {
   document.getElementById("but1").addEventListener("click", play);
-  document.getElementById("but2").addEventListener("click", back)
+  document.getElementById("but2").addEventListener("click", back);
 }
 
 function play() {
   document.getElementById("main").style.display = "grid";
   document.getElementById("form").style.display = "none";
+  ambient1.play();
 }
 
 function back() {
@@ -26,7 +32,7 @@ function back() {
 
 function showTextNode(textNodeIndex) {
   const textNode = textNodes.find(textNode => textNode.id === textNodeIndex);
-  textElement.innerText = textNode.text;
+  textElement.innerHTML = textNode.text;
   while (optionButtonsElement.firstChild) {
     optionButtonsElement.removeChild(optionButtonsElement.firstChild);
   }
@@ -43,7 +49,7 @@ function showTextNode(textNodeIndex) {
 }
 
 function showOption(option) {
-  return option.requiredState == null || option.requiredState(state)
+  return option.requiredState == null || option.requiredState(state);
 }
 
 function selectOption(option) {
@@ -51,6 +57,11 @@ function selectOption(option) {
   if (nextTextNodeId <= 0) {
     return startGame()
   }
+
+  const gameOver = option.gameOver;
+  if(gameOver == true) {
+    location.reload();
+  } 
   state = Object.assign(state, option.setState);
   showTextNode(nextTextNodeId)
 }
@@ -63,7 +74,7 @@ const textNodes = [
     text: 'Your name is Jeffrey Stallson, you are a reporter for a newspaper in a small town located in the middle of the United States. Recently there has been a report of a teenager went missing. His last known location was a forest thn, that is rumoured by the locals to be haunted. Your decide to make a report on the mansion and prove the local rumours wrong, you were not issued an official permit. Since your work was not approved you have to go at night. You are on your own. You have already arrived at the destination. You step out of the car.',
     options: [
       {
-        text: 'Start',
+        text: "Start",
         nextText: 2
       }
     ]
@@ -244,7 +255,7 @@ const textNodes = [
   },
   {
     id: 15,
-    text: 'The note states: "Ill be back home at 6PM! Your dinner is in the fridge, remember to clear the bookshelf upstairs. After I come back we can finally go to see show! \n much love,███████ "',
+    text: "The note states: " + "<span style='font-family: Caveat; font-size: 25px';>" + '"Ill be back home at 6PM! Your dinner is in the fridge, remember to clear the bookshelf upstairs. After I come back we can finally go to see show! \n much love,███████ "' + "</span>",
     options: [
       {
         text: 'Back',
@@ -269,7 +280,7 @@ const textNodes = [
   },
   {
     id: 17,
-    text: 'You find a dirty note, most of is blurry and washed off, but you manage to make out this: "██████████bookshelf upstairs████tried escaping again█████████better security need███████buy new locks████chains██" You have a feeling that it might be for the better that the note was damaged.',
+    text: "You find a dirty note, most of is blurry and washed off, but you manage to make out this: " + "<span style='font-family: Caveat; font-size: 25px';>" + "██████████bookshelf upstairs████tried escaping again█████████better security need███████buy new locks████chains██. " + "</span>" +  "You have a feeling that it might be for the better that the note was damaged.",
     options: [
       {
         text: 'Back',
@@ -418,7 +429,7 @@ const textNodes = [
   },
   {
     id: 29,
-    text: "You pick up the wallet and look through it. Inside is an ID of a 'Dave O████' the last name is covered by stains. It appears you found your missing person, or at least what's left of him.	(you got proof of the missing teen)",
+    text: "You pick up the wallet and look through it. Inside is an ID of a " +  '"Dave O████"' +  " the last name is covered by stains. It appears you found your missing person, or at least what's left of him.	(you got proof of the missing teen)",
     options: [
       {
         text: 'Back',
@@ -585,7 +596,7 @@ const textNodes = [
   },
   {
     id: 43,
-    text: "You pick the note up, it says: 'The divine voice told me to make a sacrifice again and I shall provide. Only than I can truly obtain the forbidden knowledge. I cannot not dissapoint. I will not dissapoint.' It appears your opressor hears voices, perfect, more reasons to get out of here as fast as possible. (you got proof of the residents insanity).",
+    text: "You pick the note up, it says: " + "<span style='font-family: Caveat; font-size: 25px';>" + '"The divine voice told me to make a sacrifice again and I shall provide. Only than I can truly obtain the forbidden knowledge. I cannot not dissapoint. I will not dissapoint." ' + "</span>" + "It appears your opressor hears voices, perfect, more reasons to get out of here as fast as possible. (you got proof of the residents insanity).",
     options: [
       {
         text: 'Back',
@@ -651,7 +662,7 @@ const textNodes = [
     options: [
       {
         text: 'End (back to begin)',
-        nextText: 1
+        gameOver: true
       }
     ]
   },
@@ -661,7 +672,7 @@ const textNodes = [
     options: [
       {
         text: 'End (back to begin)',
-        nextText: 1
+        gameOver: true
       }
     ]
   },
@@ -671,7 +682,7 @@ const textNodes = [
     options: [
       {
         text: 'End (back to begin)',
-        nextText: 1
+        gameOver: true
       }
     ]
   },
@@ -681,7 +692,7 @@ const textNodes = [
     options: [
       {
         text: 'End (back to begin)',
-        nextText: 1
+        gameOver: true
       }
     ]
   },
@@ -691,7 +702,7 @@ const textNodes = [
     options: [
       {
         text: 'End (back to begin)',
-        nextText: 1
+        gameOver: true
       }
     ]
   }
