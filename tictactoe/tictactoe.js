@@ -12,6 +12,8 @@ click1.src = "click1.mp3";
 click2.src = "click2.mp3";
 draw.src = "draw.mp3";
 win.src = "win.mp3";
+win.volume = 0.7;
+draw.volume = 0.7;
 
 //player draw
 var currentPlayer;
