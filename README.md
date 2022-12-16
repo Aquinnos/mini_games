@@ -1,2 +1,2 @@
 # mini_games
-Project by Krystian i Szymon
+My first bigger project
