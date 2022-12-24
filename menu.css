@@ -15,6 +15,7 @@ body {
   align-items: center;
   background-color: #221c1c;
   font-family: Storm_gust;
+  overflow: hidden;
 }
 
 hr {
@@ -175,14 +176,13 @@ input[type=button]:hover {
     padding: 1.1rem 2.5rem;
     width: 170px;
     margin-top: 1rem;
-    border-radius: 0.4rem;
     margin: 1.5rem;
     font-size: 1.2rem;
   }
 }
 @media (max-width: 600px) {
   hr {
-    width: 15rem;
+    width: 13.5rem;
   }
   #main {
     width: 180px;
@@ -198,13 +198,13 @@ input[type=button]:hover {
   }
   #menu h2 {
     font-weight: 400;
-    font-size: 1.5rem;
+    font-size: 1.7rem;
+    letter-spacing: 0.3rem;
   }
   input[type=button] {
     padding: 1.1rem 2.5rem;
     width: 150px;
     margin-top: 1rem;
-    border-radius: 0.4rem;
     margin: 1rem;
     font-size: 1rem;
   }
