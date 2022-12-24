@@ -9,6 +9,10 @@ $font-St-gust: Storm_gust;
     box-sizing: border-box;
 }
 
+html {
+    font-size: 62.5%;
+}
+
 body {
     font-family: Arial, Helvetica, sans-serif;
     display: flex;
@@ -19,10 +23,10 @@ body {
 }
 
 hr {
-    width: 200px;
-    height: 2px;
+    width: 20rem;
+    height: 0.2rem;
     border: 1px solid $blue;
-    margin: 10px 0px 10px 0px;
+    margin: 1rem 0 1rem 0;
 }
 
 #main {
@@ -148,5 +152,81 @@ input[type="button"] {
 
     100% {
         transform: rotate(360deg);
+    }
+}
+
+@media (max-width: 1000px) {
+
+    hr {
+        width: 17rem;
+    }
+
+    #main {
+        width: 250px;
+        height: 320px;
+    
+        &::before {
+            width: 250px;
+            height: 320px;
+            }
+        
+        &::after {
+            width: 250px;
+            height: 320px;
+        }
+    }
+
+    #menu {
+        h2 {
+            font-weight: 400;
+            font-size: 2.5rem;
+        }
+    }
+
+    input[type="button"] {
+        padding: 1.1rem 2.5rem;
+        width: 170px;
+        margin-top: 1rem;
+        border-radius: 0.4rem;
+        margin: 1.5rem;
+        font-size: 1.2rem;
+    }
+}
+
+@media (max-width: 600px) {
+
+    hr {
+        width: 15rem;
+    }
+
+    #main {
+        width: 180px;
+        height: 250px;
+    
+        &::before {
+            width: 180px;
+            height: 250px;
+            }
+        
+        &::after {
+            width: 180px;
+            height: 250px;
+        }
+    }
+
+    #menu {
+        h2 {
+            font-weight: 400;
+            font-size: 1.5rem;
+        }
+    }
+
+    input[type="button"] {
+        padding: 1.1rem 2.5rem;
+        width: 150px;
+        margin-top: 1rem;
+        border-radius: 0.4rem;
+        margin: 1rem;
+        font-size: 1rem;
     }
 }
