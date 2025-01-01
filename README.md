@@ -19,8 +19,3 @@ Navigate to the folder of the game you want to run and follow the instructions f
 ## Contributing
 
 If you want to add a new game or improve an existing one, please open a pull request. Before submitting a pull request, make sure your changes comply with the code style guidelines and that all tests pass successfully.
-
-## License
-
-This repository is licensed under the MIT License. See the [LICENSE](LICENSE) file for more information.
-
