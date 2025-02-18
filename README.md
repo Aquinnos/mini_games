@@ -9,7 +9,7 @@ This repository contains a collection of mini-games that you can run on your loc
 To install the games, clone this repository to your local computer:
 
 ```bash
-git clone https://github.com/your-account/mini_games.git
+git clone https://github.com/aquinnos/mini_games.git
 ```
 
 ## Usage
